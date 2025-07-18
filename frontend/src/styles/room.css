@@ -1,0 +1,213 @@
+.room-section {
+  background-color: #fff;
+  padding: 50px 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #5b4f2a;
+}
+
+.room-container {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+}
+
+.room-image img {
+  width: 400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.room-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.room-header {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.room-subtitle {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.room-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0;
+  color: #7f6644;
+}
+
+.room-size {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.divider {
+  height: 1px;
+  background-color: #c1b184;
+  border: none;
+}
+
+.tariff-features-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.room-tariff {
+  background-color: #fff;
+  padding: 16px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.06);
+  min-width: 180px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.bed-box {
+  display: inline-block;
+  border: 2px solid #5b4f2a;
+  padding: 4px 10px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+.occupancy {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.room-tariff strong {
+  font-size: 0.95rem;
+  margin-top: 10px;
+  display: block;
+}
+
+.price {
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+
+.room-tariff small {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #6e6650;
+}
+
+.vertical-separator {
+  width: 2px;
+  background-color: #c1b184;
+  height: auto;
+  align-self: stretch;
+  border-radius: 1px;
+}
+
+.features {
+  flex: 1;
+}
+
+.features h4 {
+  margin: 0 0 10px 0;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 1fr));
+  gap: 18px 32px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+
+@media (max-width: 1024px) {
+  .room-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .room-image img {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .tariff-features-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .features {
+    text-align: center;
+    width: 100%;
+  }
+
+  .features h4 {
+    text-align: center;
+  }
+
+  .features ul {
+    justify-content: center;
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+  }
+
+  .vertical-separator {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .features ul {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 14px;
+  }
+
+  .room-title {
+    font-size: 1.5rem;
+  }
+
+  .room-subtitle,
+  .room-size,
+  .occupancy,
+  .bed-box,
+  .room-tariff,
+  .features li {
+    font-size: 0.8rem;
+  }
+
+  .price {
+    font-size: 1.2rem;
+  }
+
+  .features h4 {
+    font-size: 0.95rem;
+  }
+}

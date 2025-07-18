@@ -1,0 +1,176 @@
+.contact-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-banner img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+}
+
+.contact-section {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 16px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.form-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+  text-align: center;
+}
+
+
+.modern-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  width: 100%;
+}
+
+label {
+  font-size: 0.85rem;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+input,
+textarea {
+  border: none;
+  border-bottom: 1.5px solid #cceeee;
+  padding: 8px 4px;
+  font-size: 1rem;
+  background-color: transparent;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #00bcd4;
+}
+
+textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+button {
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: #36cdd4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #2bc0ca;
+}
+
+.form-status {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #009688;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contact-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-subtitle {
+    font-size: 0.9rem;
+  }
+
+  input,
+  textarea {
+    font-size: 0.95rem;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+
+  .contact-banner img {
+    height: 60vh;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+.contact-section {
+  animation: fadeInUp 1s ease-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+
+.contact-banner img {
+  animation: zoomIn 1.5s ease-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}

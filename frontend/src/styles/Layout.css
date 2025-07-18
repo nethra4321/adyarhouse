@@ -1,0 +1,448 @@
+.layout-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.layout-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.layout-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+
+.layout-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  box-sizing: border-box;
+  height: 60px;
+  animation: slideDown 0.8s ease-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.logo-section {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.hotel-title {
+  margin: 0;
+  line-height: 1;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.7;
+}
+
+.book-btn {
+  padding: 0.4rem 1rem;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  margin-left: 1rem;
+}
+
+.book-btn:hover {
+  background: white;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .layout-navbar {
+    padding: 0 1.5rem;
+    height: 50px;
+  }
+  
+  .logo-section {
+    font-size: 0.9rem;
+  }
+  
+  .nav-links {
+    gap: 1.2rem;
+  }
+  
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+  
+  .book-btn {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .layout-navbar {
+    padding: 0 1rem;
+  }
+  
+  .logo-section {
+    font-size: 0.8rem;
+  }
+  
+  .nav-links {
+    gap: 0.8rem;
+  }
+  
+  .book-btn {
+    margin-left: 0.5rem;
+    padding: 0.2rem 0.6rem;
+  }
+}
+
+.layout-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: none;
+  margin-top: 30vh;
+}
+
+.nav-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.room-section {
+  padding: 2rem;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+.bedroom-title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0 2rem;
+  gap: 1rem;
+}
+
+.bedroom-line {
+  flex: 1;
+  height: 2px;
+  background-color: #2f5130;
+  max-width: 100%;
+}
+
+.bedroom-title {
+  background-color: #2f5130;
+  color: white;
+  padding: 0.5rem 2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-radius: 2px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.room-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.room-card {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.room-card:hover {
+  transform: scale(1.03);
+}
+
+.room-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.room-card h3 {
+  background-color: #2f5130;
+  color: white;
+  margin: 0;
+  padding: 0.6rem;
+  font-size: 1.1rem;
+}
+
+.room-card p {
+  margin: 0.6rem 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.info-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 3rem 2rem 4rem;
+  color: #333;
+  background-color: white;
+  gap: 2rem;
+}
+
+.location-section, .facilities-section {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+}
+
+.info-title {
+  color: #2f5130;
+  font-family: 'Segoe UI', 'sans-serif';
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  position: relative;
+  color: #000;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.info-title::after {
+  content: '';
+  display: block;
+  height: 14px;
+  width: 100px;
+  margin: 8px auto 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.swiggle {
+  display: block;
+  width: 50%;
+  margin: 0.5rem auto 0;
+  position: relative;
+  top: -30px; 
+}
+
+.location-items p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+
+.amenities-section {
+  padding: 2rem 1.5rem 3rem;
+  background: #fff;
+  color: #000;
+  text-align: center;
+}
+
+.amenities-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  margin-top: -3rem; 
+  color: #2f5130; 
+}
+
+.underline {
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  margin: 0 auto 2rem;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.amenity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  color: #000;
+}
+
+.amenity i {
+  font-size: 2rem;
+  color: #000;
+}
+
+.amenity p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+ color: #2f5130;
+}
+
+@media (max-width: 768px) {
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .facility-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-room-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animated-room-card.in-view {
+  animation: fadeInCard 1s ease forwards;
+}
+
+.animated-line {
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.6s ease-out;
+  background-color: #2f5130;
+}
+
+.animated-line.in-view {
+  transform: scaleX(1);
+}
+
+.animated-title {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: all 0.7s ease-out;
+}
+
+
+.animated-title.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  animation: zoomIn 1.5s ease-out forwards;
+}
+@media (max-width: 768px) {
+  .layout-bg-image {
+    object-position: center top;
+        width: 100%;
+
+  }
+}
+
+@media (max-width: 480px) {
+  .layout-bg-image {
+    object-position: center top;
+    object-fit: cover;
+  }
+}
+@keyframes slideFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-slide-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideFadeIn 1s ease forwards;
+}
