@@ -9,12 +9,15 @@ const Navbar = () => {
   return (
       <nav className="layout-navbar">
         <div className="logo-section">
-          <h1 className="hotel-title">THE ADYAR HOUSE</h1>
+          <Link to="/">
+          <img src="/logo2.png" class="logo-img"></img>
+          </Link>
+          {/* <h1 className="hotel-title">THE ADYAR HOUSE</h1> */}
         </div>
         <ul className="nav-links">
           <li>
             <Link to="/contact" className="no-style-link">
-              <FaPhone className="icon" /> CONTACT US
+              <FaPhone className="icon flipped-icon" />CONTACT US
             </Link>
           </li>
           <li>
@@ -24,6 +27,8 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
+
+      
   );
 };
 

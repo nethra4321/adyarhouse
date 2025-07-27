@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import '../styles/Layout.css';
 import '../styles/contactForm.css';
+import Footer from './footer';
 import { FaPhone } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
@@ -54,7 +55,23 @@ useEffect(() => {
 
       {/* Room Section */}
       <section ref={roomRef} className="room-section">
+      <div className="intro-wrapper">
+        <div className="intro-content">
+          <h2 className="intro-title">
+            A LUXURY HOMESTAY <br /> IN CHENNAI'S HEART
+          </h2>
+          <div className="intro-divider" />
+          <p className="intro-description">
+           Welcome to The Adyar House, a Cozy 6BR Private Luxury Villa in the heart of Chennai! This newly built home is perfect for groups of 12+, with 6 ensuite AC rooms featuring Queen beds, Smart TVs & work desks.
+            <br /><br />
+            Enjoy a rooftop terrace garden, lounge & kitchenette. Teru, the South Indian restaurant downstairs, serves all meals. Housekeeping is available 24/7.<br/><br/>
+            Just 1.5 km from Besant Nagar Beach & close to IT & business hubs of OMR, ECR & Alwarpet. Book the full villa or individual rooms!
+          </p>
+        </div>
+      </div>
+
       <div className="bedroom-title-wrapper animated-title-group">
+
         <div className="bedroom-line animated-line" />
         <div className="bedroom-title animated-title">Bedroom Type</div>
         <div className="bedroom-line animated-line" />
@@ -86,43 +103,39 @@ useEffect(() => {
 
 
 
-<div className="amenities-section animate-slide-in">
-  <h2 className="amenities-title">AMENITIES</h2>
-  <div className='underline'></div>
+    <div className="amenities-section animate-slide-in">
+      <h2 className="amenities-title">AMENITIES</h2>
+      <div className='underline'></div>
 
-  <div className="amenities-grid">
-    <div className="amenity">
-      <i className="fa-solid fa-wifi"></i>
-      <p>HIGH-SPEED WI-FI</p>
+      <div className="amenities-grid">
+        <div className="amenity">
+          <i className="fa-solid fa-wifi"></i>
+          <p>HIGH-SPEED WI-FI</p>
+        </div>
+        <div className="amenity">
+          <i className="fa-solid fa-utensils"></i>
+          <p>IN-HOUSE RESTAURANT</p>
+        </div>
+        <div className="amenity">
+          <i className="fa-solid fa-tv"></i>
+          <p>FLAT-SCREEN TV</p>
+        </div>
+        <div className="amenity">
+          <i className="fa-solid fa-broom"></i>
+          <p>HOUSEKEEPING</p>
+        </div>
+        <div className="amenity">
+          <i className="fa-solid fa-camera"></i>
+          <p>24/7 CCTV</p>
+        </div>
+        <div className="amenity">
+          <i className="fa-solid fa-couch"></i>
+          <p>LOUNGE AREA</p>
+        </div>
+      </div>
     </div>
-    <div className="amenity">
-      <i className="fa-solid fa-utensils"></i>
-      <p>IN-HOUSE RESTAURANT</p>
-    </div>
-    <div className="amenity">
-      <i className="fa-solid fa-tv"></i>
-      <p>FLAT-SCREEN TV</p>
-    </div>
-    <div className="amenity">
-      <i className="fa-solid fa-broom"></i>
-      <p>HOUSEKEEPING</p>
-    </div>
-    <div className="amenity">
-      <i className="fa-solid fa-camera"></i>
-      <p>24/7 CCTV</p>
-    </div>
-    <div className="amenity">
-      <i className="fa-solid fa-couch"></i>
-      <p>LOUNGE AREA</p>
-    </div>
-  </div>
-</div>
-
-
-
-
-
 </section>
+<Footer />
 </div>
   );
 };

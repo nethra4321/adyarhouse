@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 .layout-wrapper {
   position: relative;
   width: 100%;
@@ -6,6 +11,10 @@
   color: white;
   font-family: 'Segoe UI', sans-serif;
 }
+html, body {
+  overflow-x: hidden;
+}
+
 
 .layout-bg-image {
   position: absolute;
@@ -23,7 +32,6 @@
   z-index: 1;
 }
 
-
 .layout-navbar {
   position: absolute;
   top: 0;
@@ -31,45 +39,49 @@
   right: 0;
   padding: 0 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
   box-sizing: border-box;
-  height: 60px;
-  animation: slideDown 0.8s ease-out;
-  animation-fill-mode: forwards;
+  height: 90px;
+  animation: slideDown 0.8s ease-out forwards;
   opacity: 0;
+  color: #333;
 }
 
-.logo-section {
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  white-space: nowrap;
-  flex: 1;
+.logo-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
-.hotel-title {
-  margin: 0;
-  line-height: 1;
+.logo-img img {
+  max-height: 80%;
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-links {
-  list-style: none;
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   gap: 2rem;
   margin: 0;
   padding: 0;
   align-items: center;
-  flex: 1;
-  justify-content: flex-end;
+  list-style: none;
 }
 
 .nav-links a {
-  color: white;
+  color: #333;
   text-decoration: none;
   font-size: 0.95rem;
   white-space: nowrap;
@@ -82,9 +94,9 @@
 
 .book-btn {
   padding: 0.4rem 1rem;
-  border: 1px solid white;
+  border: 1px solid #333;
   background: transparent;
-  color: white;
+  color: #333;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -93,51 +105,8 @@
 }
 
 .book-btn:hover {
-  background: white;
-  color: black;
-}
-
-@media (max-width: 768px) {
-  .layout-navbar {
-    padding: 0 1.5rem;
-    height: 50px;
-  }
-  
-  .logo-section {
-    font-size: 0.9rem;
-  }
-  
-  .nav-links {
-    gap: 1.2rem;
-  }
-  
-  .nav-links a {
-    font-size: 0.85rem;
-  }
-  
-  .book-btn {
-    padding: 0.3rem 0.8rem;
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .layout-navbar {
-    padding: 0 1rem;
-  }
-  
-  .logo-section {
-    font-size: 0.8rem;
-  }
-  
-  .nav-links {
-    gap: 0.8rem;
-  }
-  
-  .book-btn {
-    margin-left: 0.5rem;
-    padding: 0.2rem 0.6rem;
-  }
+  background: #333;
+  color: white;
 }
 
 .layout-content {
@@ -240,7 +209,8 @@
   gap: 2rem;
 }
 
-.location-section, .facilities-section {
+.location-section,
+.facilities-section {
   flex: 1;
   min-width: 280px;
   max-width: 400px;
@@ -252,10 +222,9 @@
   font-weight: 500;
   font-size: 1.2rem;
   text-transform: uppercase;
-  position: relative;
-  color: #000;
   text-align: center;
   margin-bottom: 1.5rem;
+  position: relative;
 }
 
 .info-title::after {
@@ -274,14 +243,13 @@
   width: 50%;
   margin: 0.5rem auto 0;
   position: relative;
-  top: -30px; 
+  top: -30px;
 }
 
 .location-items p {
   margin: 0.3rem 0;
   font-size: 0.95rem;
 }
-
 
 .amenities-section {
   padding: 2rem 1.5rem 3rem;
@@ -294,8 +262,8 @@
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.3rem;
-  margin-top: -3rem; 
-  color: #2f5130; 
+  margin-top: -3rem;
+  color: #2f5130;
 }
 
 .underline {
@@ -308,7 +276,7 @@
 .amenities-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3rem 3rem;
+  gap: 3rem;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -330,18 +298,72 @@
   font-size: 1rem;
   font-weight: 500;
   margin: 0;
- color: #2f5130;
+  color: #2f5130;
 }
 
 @media (max-width: 768px) {
+  .layout-navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 0.5rem 1rem;
+    align-items: flex-start;
+  }
+
+  .logo-img {
+    height: 80px;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .logo-img img {
+    height: 60px;
+    width: auto;
+  }
+
+  .nav-links {
+    position: static;
+    transform: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    padding: 0.3rem 0;
+  }
+
+  .book-btn {
+    font-size: 0.85rem;
+    padding: 0.4rem 1rem;
+    margin-left: 0;
+  }
+
   .amenities-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-}
 
-@media (max-width: 480px) {
-  .amenities-grid {
-    grid-template-columns: 1fr;
+  .layout-bg-image {
+    object-position: center top;
+    width: 100%;
+  }
+
+  .intro-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro-divider {
+    display: none;
+  }
+
+  .intro-title, .intro-description {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -351,6 +373,25 @@
   }
 }
 
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 0.5rem;
+  }
+
+  .book-btn {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .layout-bg-image {
+    object-position: center top;
+    object-fit: cover;
+  }
+
+  .logo-img img {
+    height: 50px;
+  }
+}
 
 @keyframes slideDown {
   from {
@@ -368,6 +409,24 @@
     opacity: 0;
     transform: translateY(30px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFadeIn {
   to {
     opacity: 1;
     transform: translateY(0);
@@ -401,48 +460,74 @@
   transition: all 0.7s ease-out;
 }
 
-
 .animated-title.in-view {
   opacity: 1;
   transform: translateY(0);
 }
 
-@keyframes zoomIn {
-  from {
-    transform: scale(1.1);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
 .zoomIn {
   animation: zoomIn 1.5s ease-out forwards;
 }
-@media (max-width: 768px) {
-  .layout-bg-image {
-    object-position: center top;
-        width: 100%;
 
-  }
-}
-
-@media (max-width: 480px) {
-  .layout-bg-image {
-    object-position: center top;
-    object-fit: cover;
-  }
-}
-@keyframes slideFadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 .animate-slide-in {
   opacity: 0;
   transform: translateY(30px);
   animation: slideFadeIn 1s ease forwards;
+}
+
+.intro-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 8px;
+}
+
+.intro-content {
+  display: flex;
+  align-items: stretch;
+  gap: 80px;
+}
+
+.intro-title {
+  flex: 1 1 30%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #29422b;
+  margin: 0;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.intro-divider {
+  width: 2px;
+  background-color: #29422b;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.intro-description {
+  flex: 1 1 60%;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+  margin: 0;
+  text-align: left;
+}
+/* .icon {
+  color: #333;
+  font-size: 1rem;
+  margin-right: 6px;
+  vertical-align: middle;
+} */
+.flipped-icon {
+  transform: scaleX(-1);
+ margin-right: 20px;
+}
+hr {
+  margin-top: 30px;
+  border: none;
+  height: 1px;
+  background-color: #29422b;
 }

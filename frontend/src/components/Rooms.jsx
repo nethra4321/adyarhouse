@@ -1,12 +1,20 @@
 import React from 'react';
 import '../styles/room.css';
 import '../styles/contactForm.css';
-
+import Footer from './footer';
 const Room = () => {
   return (
     <>
       <div className="contact-banner zoom-in">
         <img src="/bg.jpg" alt="Background" />
+      </div>
+      <div className="room-intro">
+        <h2>Discover Our Signature Rooms</h2>
+        <p>
+          We offer six beautiful rooms, each named after rivers that are central to the South Indian culture and landscape.
+          <br />
+          <strong>Experience Madras in the Heart of Adyar.</strong>
+        </p>
       </div>
 
       {/* AMARAVATHI */}
@@ -295,7 +303,16 @@ const Room = () => {
             </div>
           </div>
         </div>
+
+{/* <br /> */}
+<div className="room-description">
+  <p>
+    Each room is designed to offer comfort, peace, and a homely feel. With elegant interiors, quality linens, and all the amenities you could need, every room is a perfect sanctuary after a day of exploration.
+  </p>
+</div>
+
       </section>
+      <Footer />
     </>
   );
 };

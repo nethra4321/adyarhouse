@@ -211,3 +211,54 @@
     font-size: 0.95rem;
   }
 }
+.room-intro {
+  text-align: center;
+  max-width: 900px;
+  margin: 40px auto 60px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', sans-serif;
+ color: #7f6644;
+}
+
+.room-intro h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+ color: #7f6644;
+}
+
+.room-intro p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+.room-description {
+  max-width: 1000px;
+  margin: 20px auto 10px;
+  padding: 50px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: #444;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+  animation: fadeInUp 1.2s ease-in-out both;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.room-description::before , .room-description::after{
+  content: "";
+  display: block;
+  width: 80px;
+  height: 2px;
+  background-color: #c4a94c; 
+    margin: 20px auto 20px auto;
+}
