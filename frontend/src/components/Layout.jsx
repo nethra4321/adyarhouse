@@ -7,136 +7,160 @@ import { Link } from 'react-router-dom';
 
 const Layout = ({ children }) => {
   const roomRef = useRef(null);
-useEffect(() => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          // Animate room cards
-          const cards = entry.target.querySelectorAll('.room-card');
-          cards.forEach((card, index) => {
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Animate heading lines
+            const lines = entry.target.querySelectorAll('.animated-line');
+            lines.forEach((line, index) => {
+              setTimeout(() => {
+                line.classList.add('in-view');
+              }, index * 200); // stagger lines
+            });
+
+            // Animate title
+            const title = entry.target.querySelector('.animated-title');
             setTimeout(() => {
-              card.classList.add('in-view');
-            }, index * 400); // stagger cards
-          });
+              title.classList.add('in-view');
+            }, 600);
+          }
+        });
+      },
+      { threshold: 0.05 }
+    );
 
-          // Animate heading lines
-          const lines = entry.target.querySelectorAll('.animated-line');
-          lines.forEach((line, index) => {
-            setTimeout(() => {
-              line.classList.add('in-view');
-            }, index * 200); // stagger lines
-          });
+    if (roomRef.current) observer.observe(roomRef.current);
 
-          // Animate title
-          const title = entry.target.querySelector('.animated-title');
-          setTimeout(() => {
-            title.classList.add('in-view');
-          }, 600);
-        }
-      });
-    },
-    { threshold: 0.3 }
-  );
-
-  if (roomRef.current) observer.observe(roomRef.current);
-
-  return () => {
-    if (roomRef.current) observer.unobserve(roomRef.current);
-  };
-}, []);
-
+    return () => {
+      if (roomRef.current) observer.unobserve(roomRef.current);
+    };
+  }, []);
 
   return (
     <div>
       <img src="/bg.jpg" alt="Background" className="layout-bg-image zoomIn"/>
-
       <section className="nav-section" />
 
       {/* Room Section */}
       <section ref={roomRef} className="room-section">
-      <div className="intro-wrapper">
-        <div className="intro-content">
-          <h2 className="intro-title">
-            A LUXURY HOMESTAY <br /> IN CHENNAI'S HEART
-          </h2>
-          <div className="intro-divider" />
-          <p className="intro-description">
-           Welcome to The Adyar House, a Cozy 6BR Private Luxury Villa in the heart of Chennai! This newly built home is perfect for groups of 12+, with 6 ensuite AC rooms featuring Queen beds, Smart TVs & work desks.
-            <br /><br />
-            Enjoy a rooftop terrace garden, lounge & kitchenette. Teru, the South Indian restaurant downstairs, serves all meals. Housekeeping is available 24/7.<br/><br/>
-            Just 1.5 km from Besant Nagar Beach & close to IT & business hubs of OMR, ECR & Alwarpet. Book the full villa or individual rooms!
-          </p>
+        <div className="intro-wrapper">
+          <div className="intro-content">
+            <h2 className="intro-title">
+              A LUXURY HOMESTAY <br /> IN CHENNAI'S HEART
+            </h2>
+            <div className="intro-divider" />
+            <p className="intro-description">
+              Welcome to The Adyar House, a Cozy 6BR Private Luxury Villa in the heart of Chennai! This newly built home is perfect for groups of 12+, with 6 ensuite AC rooms featuring Queen beds, Smart TVs & work desks.
+              <br /><br />
+              Enjoy a rooftop terrace garden, lounge & kitchenette. Teru, the South Indian restaurant downstairs, serves all meals. Housekeeping is available 24/7.<br/><br/>
+              Just 1.5 km from Besant Nagar Beach & close to IT & business hubs of OMR, ECR & Alwarpet. Book the full villa or individual rooms!
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div className="bedroom-title-wrapper animated-title-group">
+         {/* About Section */}
+        <div className="about-section">
+          {/* 1st Row */}
+          <div className="about-row"> 
+            <div className="about-text">
+              <h2>ABOUT US</h2>
+              <p>
+                Welcome to The Adyar House – A Homestay Experience Rooted in Madras Charm<br /><br />
+                Nestled in the heart of Chennai's vibrant Adyar neighborhood, The Adyar House offers a tranquil retreat with a touch of Madras' timeless charm. Our homestay is designed to immerse you in the essence of the city—its warmth, culture, and hospitality—while providing the comfort of a modern home away from home. Whether you're visiting for business, leisure, or a special occasion, we promise a memorable and unique experience that reflects the true spirit of Madras.
+              </p>
+            </div>
+            <img src="/stairs.jpg" alt="About Us" className="about-img" />
+          </div>
 
-        <div className="bedroom-line animated-line" />
-        <div className="bedroom-title animated-title">Bedroom Type</div>
-        <div className="bedroom-line animated-line" />
-      </div>
+          <div className="about-row reverse"> 
+            <img src="/adhouse.jpg" alt="Our Story" className="about-img" />
+            <div className="about-text">
+              <h2>Our Story</h2>
+              <p>
+                The Adyar House was born from a vision to create a space that not only feels like home but also celebrates the culture, history, and traditions of Chennai. From its Madras-themed décor to the personalized services we offer, every corner of The Adyar House tells a story—one that honors the rich heritage of this incredible city.<br /><br />
+                What started as a small family project has grown into a homestay that proudly represents the charm of old Madras while offering all the modern comforts you need for a restful stay. We believe in creating a welcoming atmosphere where every guest feels like part of our extended family.
+              </p>
+            </div>
+          </div>
+
+          <div className="about-row">
+            <div className="about-text">
+              <h2>In House South Indian Restaurant:</h2>
+              <p>
+                <strong>Teru – A Culinary Experience:</strong> Located in the premises of The Adyar House, Teru offers a delightful South Indian street food experience that you can enjoy during your stay. Teru is known for its authentic, flavorful dishes from Tamil Nadu, Andhra Pradesh, and Karnataka, and guests can indulge in the finest local street food just steps away from their rooms.
+              </p>
+            </div>
+            <img src="/teru.jpg" alt="Teru Restaurant" className="about-img" />
+          </div>
+        </div>
+
+        <div className="bedroom-title-wrapper animated-title-group">
+          <div className="bedroom-line animated-line" />
+          <div className="bedroom-title animated-title">Bedroom Types</div>
+          <div className="bedroom-line animated-line" />
+        </div>
 
         <div className="room-cards">
-          <div className="room-card animated-room-card">
+          <div className="room-card">
             <img src="/deluxe.jpg" alt="Deluxe" />
             <h3>Deluxe</h3>
             <p>₹ 2650 / night</p>
             <p><i>Onwards</i></p>
           </div>
-          <div className="room-card animated-room-card">
+          <div className="room-card">
             <img src="/premium.jpg" alt="Premium" />
             <h3>Premium</h3>
             <p>₹ 3450 / night</p>
             <p><i>Onwards</i></p>
           </div>
-          <div className="room-card animated-room-card">
+          <div className="room-card">
             <img src="/signature.jpg" alt="Signature" />
             <h3>Signature</h3>
             <p>₹ 3600 / night</p>
             <p><i>Onwards</i></p>
           </div>
         </div>
+
       </section>
 
-   <section className="info-section">
+      <section className="info-section">
+        <div className="amenities-section animate-slide-in">
+          <h2 className="amenities-title">AMENITIES</h2>
+          <div className='underline'></div>
 
-
-
-    <div className="amenities-section animate-slide-in">
-      <h2 className="amenities-title">AMENITIES</h2>
-      <div className='underline'></div>
-
-      <div className="amenities-grid">
-        <div className="amenity">
-          <i className="fa-solid fa-wifi"></i>
-          <p>HIGH-SPEED WI-FI</p>
+          <div className="amenities-grid">
+            <div className="amenity">
+              <i className="fa-solid fa-wifi"></i>
+              <p>HIGH-SPEED WI-FI</p>
+            </div>
+            <div className="amenity">
+              <i className="fa-solid fa-utensils"></i>
+              <p>IN-HOUSE RESTAURANT</p>
+            </div>
+            <div className="amenity">
+              <i className="fa-solid fa-tv"></i>
+              <p>FLAT-SCREEN TV</p>
+            </div>
+            <div className="amenity">
+              <i className="fa-solid fa-broom"></i>
+              <p>HOUSEKEEPING</p>
+            </div>
+            <div className="amenity">
+              <i className="fa-solid fa-camera"></i>
+              <p>24/7 CCTV</p>
+            </div>
+            <div className="amenity">
+              <i className="fa-solid fa-couch"></i>
+              <p>LOUNGE AREA</p>
+            </div>
+          </div>
         </div>
-        <div className="amenity">
-          <i className="fa-solid fa-utensils"></i>
-          <p>IN-HOUSE RESTAURANT</p>
-        </div>
-        <div className="amenity">
-          <i className="fa-solid fa-tv"></i>
-          <p>FLAT-SCREEN TV</p>
-        </div>
-        <div className="amenity">
-          <i className="fa-solid fa-broom"></i>
-          <p>HOUSEKEEPING</p>
-        </div>
-        <div className="amenity">
-          <i className="fa-solid fa-camera"></i>
-          <p>24/7 CCTV</p>
-        </div>
-        <div className="amenity">
-          <i className="fa-solid fa-couch"></i>
-          <p>LOUNGE AREA</p>
-        </div>
-      </div>
+      </section>
+      <Footer />
     </div>
-</section>
-<Footer />
-</div>
   );
 };
 

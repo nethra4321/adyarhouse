@@ -27,7 +27,7 @@ const Room = () => {
           <div className="room-details">
             <div className="room-header">
               <p className="room-subtitle">Premium Room</p>
-              <h1 className="room-title">‘AMARAVATHI’</h1>
+              <h1 className="room-title">AMARAVATHI</h1>
               <p className="room-size">Size: 165 sq ft</p>
             </div>
 
@@ -54,7 +54,7 @@ const Room = () => {
                   <li><i className="fas fa-tv"></i> Smart TV</li>
                   <li><i className="fas fa-briefcase"></i> Work Desk</li>
                   <li><i className="fas fa-suitcase-rolling"></i> Cupboard</li>
-                  <li><i className="fas fa-towel"></i> Towels</li>
+                  <li><i className="fas fa-layer-group"></i> Towels</li> 
                   <li><i className="fas fa-bath"></i> Bathing Soaps</li>
                   <li><i className="fas fa-tooth"></i> Dental Kit</li>
                   <li><i className="fas fa-wifi"></i> Free WiFi</li>
@@ -75,7 +75,7 @@ const Room = () => {
           <div className="room-details">
             <div className="room-header">
               <p className="room-subtitle">Premium Room</p>
-              <h1 className="room-title">‘VAIGAI’</h1>
+              <h1 className="room-title">VAIGAI</h1>
               <p className="room-size">Size: 150 sq ft</p>
             </div>
 
@@ -102,7 +102,7 @@ const Room = () => {
                   <li><i className="fas fa-tv"></i> Smart TV</li>
                   <li><i className="fas fa-briefcase"></i> Work Desk</li>
                   <li><i className="fas fa-suitcase-rolling"></i> Cupboard</li>
-                  <li><i className="fas fa-towel"></i> Towels</li>
+                  <li><i className="fas fa-layer-group"></i> Towels</li> 
                   <li><i className="fas fa-bath"></i> Bathing Soaps</li>
                   <li><i className="fas fa-tooth"></i> Dental Kit</li>
                   <li><i className="fas fa-wifi"></i> Free WiFi</li>
@@ -123,7 +123,7 @@ const Room = () => {
           <div className="room-details">
             <div className="room-header">
               <p className="room-subtitle">Classic Room</p>
-              <h1 className="room-title">‘PAMBA’</h1>
+              <h1 className="room-title">PAMBA</h1>
               <p className="room-size">Size: 120 sq ft</p>
             </div>
 
@@ -150,7 +150,7 @@ const Room = () => {
                   <li><i className="fas fa-tv"></i> Smart TV</li>
                   <li><i className="fas fa-briefcase"></i> Work Desk</li>
                   <li><i className="fas fa-suitcase-rolling"></i> Cupboard</li>
-                  <li><i className="fas fa-towel"></i> Towels</li>
+                  <li><i className="fas fa-layer-group"></i> Towels</li> 
                   <li><i className="fas fa-bath"></i> Bathing Soaps</li>
                   <li><i className="fas fa-tooth"></i> Dental Kit</li>
                   <li><i className="fas fa-wifi"></i> Free WiFi</li>
@@ -171,7 +171,7 @@ const Room = () => {
           <div className="room-details">
             <div className="room-header">
               <p className="room-subtitle">Deluxe Room</p>
-              <h1 className="room-title">‘PALAR’</h1>
+              <h1 className="room-title">PALAR</h1>
               <p className="room-size">Size: 130 sq ft</p>
             </div>
 
@@ -198,7 +198,7 @@ const Room = () => {
                   <li><i className="fas fa-tv"></i> Smart TV</li>
                   <li><i className="fas fa-briefcase"></i> Work Desk</li>
                   <li><i className="fas fa-suitcase-rolling"></i> Cupboard</li>
-                  <li><i className="fas fa-towel"></i> Towels</li>
+                  <li><i className="fas fa-layer-group"></i> Towels</li> 
                   <li><i className="fas fa-bath"></i> Bathing Soaps</li>
                   <li><i className="fas fa-tooth"></i> Dental Kit</li>
                   <li><i className="fas fa-wifi"></i> Free WiFi</li>
@@ -219,7 +219,7 @@ const Room = () => {
           <div className="room-details">
             <div className="room-header">
               <p className="room-subtitle">Signature Room</p>
-              <h1 className="room-title">‘KAVERI’</h1>
+              <h1 className="room-title">KAVERI</h1>
               <p className="room-size">Size: 165 sq ft</p>
             </div>
 
@@ -246,7 +246,7 @@ const Room = () => {
                   <li><i className="fas fa-leaf"></i> Terrace Garden</li>
                   <li><i className="fas fa-briefcase"></i> Work Desk</li>
                   <li><i className="fas fa-warehouse"></i> Walk-in Wardrobe</li>
-                  <li><i className="fas fa-towel"></i> Towels</li>
+                  <li><i className="fas fa-layer-group"></i> Towels</li> 
                   <li><i className="fas fa-bath"></i> Bathing Soaps</li>
                   <li><i className="fas fa-tooth"></i> Dental Kit</li>
                   <li><i className="fas fa-wifi"></i> Free WiFi</li>
@@ -267,7 +267,7 @@ const Room = () => {
           <div className="room-details">
             <div className="room-header">
               <p className="room-subtitle">Deluxe Room</p>
-              <h1 className="room-title">‘GODAVARI’</h1>
+              <h1 className="room-title">GODAVARI</h1>
               <p className="room-size">Size: 135 sq ft</p>
             </div>
 
@@ -294,7 +294,7 @@ const Room = () => {
                   <li><i className="fas fa-tv"></i> Smart TV</li>
                   <li><i className="fas fa-briefcase"></i> Work Desk</li>
                   <li><i className="fas fa-suitcase-rolling"></i> Cupboard</li>
-                  <li><i className="fas fa-towel"></i> Towels</li>
+                  <li><i className="fas fa-layer-group"></i> Towels</li> 
                   <li><i className="fas fa-bath"></i> Bathing Soaps</li>
                   <li><i className="fas fa-tooth"></i> Dental Kit</li>
                   <li><i className="fas fa-wifi"></i> Free WiFi</li>

@@ -364,6 +364,7 @@ html, body {
   .intro-title, .intro-description {
     width: 100%;
     text-align: center;
+    
   }
 }
 
@@ -513,14 +514,9 @@ html, body {
   line-height: 1.7;
   color: #333;
   margin: 0;
-  text-align: left;
+  text-align: justify;
 }
-/* .icon {
-  color: #333;
-  font-size: 1rem;
-  margin-right: 6px;
-  vertical-align: middle;
-} */
+
 .flipped-icon {
   transform: scaleX(-1);
  margin-right: 20px;
@@ -530,4 +526,129 @@ hr {
   border: none;
   height: 1px;
   background-color: #29422b;
+}
+.about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: nowrap; 
+}
+
+.about-row.reversed {
+  flex-direction: row-reverse; 
+}
+
+.about-img {
+  flex: 1;
+  min-width: 320px;
+  max-width: 420px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-height: 280px;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 400px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: left;
+  padding: 0 20px;
+  box-sizing: border-box;
+ 
+}
+
+.about-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+@media (max-width: 992px) {
+  .about-row,
+  .about-row.reversed {
+    flex-direction: column;
+    gap: 30px;
+    flex-wrap: wrap; 
+  }
+
+
+  .about-text {
+    order: 0;
+    min-width: auto;
+    padding: 0 10px;
+  
+  }
+
+  .about-img {
+    order: 1;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    /* padding: 30px 15px; */
+    gap: 40px;
+  }
+
+  .about-img {
+    min-width: 100%;
+    max-height: 300px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .about-text {
+    min-width: auto;
+    padding: 0 10px;
+  }
+
+  .about-text h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    text-align: justify;
+       width:100%
+  }
+
+}
+
+@media (max-width: 480px) {
+  .about-img {
+    height: auto;
+    max-height: 250px;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+  .about-text p {
+  text-align: justify;
+     width:100%
+}
 }
