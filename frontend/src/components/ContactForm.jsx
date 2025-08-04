@@ -26,7 +26,8 @@ function ContactForm() {
     setStatus('Submitting...');
 
     try {
-      await fetch(`${API_URL}/contact`, {
+      await fetch(`${API_URL}/api/contact`, {
+        // await fetch("https://adyarhouse.onrender.com/api/contact",{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
