@@ -33,7 +33,7 @@ html, body {
 }
 
 .layout-navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -191,6 +191,7 @@ html, body {
   margin: 0;
   padding: 0.6rem;
   font-size: 1.1rem;
+  font-family: Verdana;
 }
 
 .room-card p {
@@ -543,6 +544,13 @@ hr {
   justify-content: space-between;
   gap: 40px;
   flex-wrap: nowrap; 
+   background-color: #fcf9f5;
+  padding: 30px;
+  /* border-radius: 12px; */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  border-top: 2px solid #d9cfc2;
+  border-bottom: 2px solid #d9cfc2
+
 }
 
 .about-row.reversed {
@@ -608,6 +616,39 @@ hr {
 }
 
 @media (max-width: 768px) {
+    .logo-section {
+    position: relative;
+    left: auto;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .logo-img {
+    height: 60px;
+    object-fit: contain;
+  }
+   .nav-links {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    position: static;
+    transform: none;
+    padding: 0 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .left-link {
+    text-align: left;
+    flex: 1;
+  }
+
+  .right-link {
+    text-align: right;
+    flex: 1;
+  }
   .about-section {
     /* padding: 30px 15px; */
     gap: 40px;
@@ -651,4 +692,27 @@ hr {
   text-align: justify;
      width:100%
 }
+}
+
+@media (max-width: 1500px) {
+  .about-img {
+    height: auto;
+    max-height: 600px;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+  .about-text p {
+  text-align: justify;
+     width:100%
+}
+}
+.teru-logo {
+  width: 100%;
+  max-width: 300px;
+  height: auto;          
+  object-fit: contain;   
+  margin: 0 auto;
+  display: block;
 }

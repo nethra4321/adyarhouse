@@ -10,7 +10,7 @@ const TermsAndConditions = () => {
   return (
     <>
     <section className="terms-section">
-      <h1 style={{textAlign:'center'}}>TERMS & CONDITIONS</h1><br/>
+      <h1 style={{textAlign:'center'}} className='terms-heading'>TERMS & CONDITIONS</h1><br/>
       <p className="terms-intro">
         By booking a stay at The Adyar House, you agree to abide by the following terms and conditions. Please read them carefully before making a reservation.
       </p>

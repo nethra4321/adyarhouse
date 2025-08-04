@@ -48,8 +48,8 @@
 }
 
 .contact-info i {
-  margin-right: 8px;
-  color: #36cdd4;
+  margin-right: 20px;
+  color: #7f6644;
   width: 15px;
   text-align: center;
 }
@@ -70,15 +70,26 @@
 }
 
 
-.contact-form-container {
+/*.contact-form-container {
   max-width: 800px;
   width: 100%;
   margin: 40px auto;
   padding: 0 24px;
   animation: fadeInUp 1s ease-out forwards;
   opacity: 0;
+}*/
+.contact-form-container {
+  background-color: #fff;
+  padding: 4rem;
+  margin:  4rem auto;
+  max-width: 600px;
+  width:100%;
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #c1b184;
 }
-
 
 .modern-form {
   display: flex;
@@ -104,7 +115,7 @@ label {
 input,
 textarea {
   width: 100%;
-  border: 1px solid #00bcd4;
+  border: 1px solid #c1b184;
   border-radius: 4px;
   padding: 12px 16px;
   font-size: 1rem;
@@ -114,7 +125,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border-color: #00bcd4;
+  border-color: #c1b184;
   background-color: #fff;
 }
 
@@ -126,7 +137,7 @@ textarea {
 button {
   width: 100%;
   padding: 14px;
-  background-color: #36cdd4;
+  background-color: #c1b184;
   color: white;
   border: none;
   border-radius: 4px;
@@ -137,13 +148,13 @@ button {
 }
 
 button:hover {
-  background-color: #2bc0ca;
+  background-color: #b89d55;
 }
 
 .form-status {
   margin-top: 8px;
   font-size: 0.9rem;
-  color: #009688;
+  color: #c1b184;
 }
 
 @keyframes fadeInUp {
@@ -178,8 +189,8 @@ button:hover {
   .contact-map,
   .contact-info,
   .contact-form-container {
-    width: 100%;
-    max-width: 100%;
+    width: 95%;
+    max-width: 600px;
   }
 
   .modern-form {
@@ -192,3 +203,14 @@ button:hover {
   }
 }
 
+.address-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  line-height: 1.5;
+  margin: 0.5rem 0;
+}
+
+.address-block i {
+  margin-top: 3px; 
+}

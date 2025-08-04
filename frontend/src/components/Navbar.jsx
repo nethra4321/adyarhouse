@@ -15,12 +15,12 @@ const Navbar = () => {
           {/* <h1 className="hotel-title">THE ADYAR HOUSE</h1> */}
         </div>
         <ul className="nav-links">
-          <li>
+          <li className="left-link">
             <Link to="/contact" className="no-style-link">
               <FaPhone className="icon flipped-icon" />CONTACT US
             </Link>
           </li>
-          <li>
+          <li className="right-link">
               <Link to="/rooms" className="no-style-link">
               ROOMS
             </Link>

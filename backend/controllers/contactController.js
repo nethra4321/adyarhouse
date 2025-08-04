@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer');
 require('dotenv').config();
 
 exports.sendContactEmail = async (req, res) => {
-  const { name, email, phone, subject, message } = req.body;
+  const { name, email, phone, subject, message,checkin, checkout  } = req.body;
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -13,16 +13,16 @@ exports.sendContactEmail = async (req, res) => {
   });
 
   const textContent = `
-New Contact Form Submission
-
-Name: ${name}
-Email: ${email}
-Phone: ${phone}
-Subject: ${subject}
-
-Message:
-${message}
-`;
+      New Enquiry
+      Name: ${name}
+      Email: ${email}
+      Phone: ${phone}
+      Check-in Date: ${checkin}
+      Check-out Date: ${checkout}
+      Subject: ${subject}
+      Message:
+      ${message}
+      `;
 
   const htmlContent = `
   <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; border: 1px solid #ddd; padding: 30px;">
@@ -31,6 +31,8 @@ ${message}
     <p><strong>Name:</strong> ${name}</p>
     <p><strong>Email:</strong> ${email}</p>
     <p><strong>Phone:</strong> ${phone}</p>
+    <p><strong>Check-in:</strong> ${checkin}</p>
+    <p><strong>Check-out:</strong> ${checkout}</p>
     <p><strong>Subject:</strong> ${subject}</p>
     <p><strong>Message:</strong><br />${message.replace(/\n/g, '<br />')}</p>
     <hr />
@@ -43,7 +45,7 @@ console.log("Sending mail with reply-to:", email);
     from: `"Adyar House Contact" <${process.env.EMAIL_USER}>`,
     to: process.env.EMAIL_RECEIVER,
     replyTo: email, 
-    subject: `New Contact Form Submission: ${subject}`,
+    subject: `New Enquiry: ${subject}`,
     text: textContent,
     html: htmlContent,
   };

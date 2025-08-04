@@ -25,17 +25,18 @@ If you need to adjust these timings, please contact us in advance, and we will d
     question: "Do you provide airport transfers?",
     answer: `Yes, we can arrange airport transfers for you at an additional charge. Please let us know your arrival details in advance so we can make the necessary arrangements.`,
   },
-  {
-    question: "What amenities are available in the rooms?",
-    answer: `Each room at The Adyar House is equipped with:
-Air conditioning
-Comfortable bedding and linens
-Free Wi-Fi
-Smart TV
-Complimentary toiletries
-Study Table 
-Wardrobe/ Storage Units`,
-  },
+{
+  question: "What amenities are available in the rooms?",
+  answer: [
+    "Air conditioning",
+    "Comfortable bedding and linens",
+    "Free Wi-Fi",
+    "Smart TV",
+    "Complimentary toiletries",
+    "Study Table",
+    "Wardrobe / Storage Units"
+  ]
+},
   {
     question: "Is The Adyar House suitable for business stays?",
     answer: `Absolutely! Our homestay is an ideal spot for business travelers, offering a peaceful environment, reliable Wi-Fi, and a central location close to major business hubs in Chennai. We also provide meeting facilities for your convenience.`,
@@ -60,35 +61,39 @@ Wardrobe/ Storage Units`,
     question: "What is the best way to reach The Adyar House?",
     answer: `The Adyar House is centrally located in the Adyar neighborhood of Chennai, with easy access to public transport and major transit hubs. We are 5 minutes from the Adyar bus terminus and 15 minutes from the nearest metro station.`,
   },
-  {
-    question: "Are there any nearby attractions or restaurants?",
-    answer: `Yes! The Adyar area is well-known for its proximity to several cultural and tourist attractions, including:
-Theosophical Society
-Elliot’s Beach
-Kapaleeshwarar Temple (in Mylapore)
-Santhome Cathedral
-Additionally, there are numerous cafes and restaurants nearby where you can explore local and international cuisines.`,
-  },
-  {
-    question: "What are some key locations near The Adyar House?",
-    answer: `IIT Madras: Only 3 km away – Ideal for academic visits or business.
-Old Mahabalipuram Road (OMR) IT Hub: Just 4 km away – A central location for tech companies & Startups.
-East Coast Road (ECR) Entertainment Hub: 4 km away – Perfect for leisure and entertainment.`,
-  },
+{
+  question: "Are there any nearby attractions or restaurants?",
+  answer: [
+    "Theosophical Society",
+    "Elliot’s Beach",
+    "Kapaleeshwarar Temple (Mylapore)",
+    "Santhome Cathedral",
+    "Numerous local and international restaurants nearby"
+  ]
+},
+{
+  question: "What are some key locations near The Adyar House?",
+  answer: [
+    "IIT Madras – Only 3 km away",
+    "Old Mahabalipuram Road (OMR) IT Hub – Just 4 km away",
+    "East Coast Road (ECR) Entertainment Hub – 4 km away"
+  ]
+},
   {
     question: "Nearby banquet halls and wedding venues",
     answer: `We are also conveniently located close to several banquet halls and wedding venues, including:
 Mayor Ramanathan Centre and Dwaraka Palace Wedding Halls in MRC Nagar & Thiruvanmiyur respectively
 A variety of event spaces & wedding halls in Mylapore, RA Puram, Alwarpet, and Kotturpuram.`,
   },
-  {
-    question: "Can I request extra services during my stay?",
-    answer: `Absolutely! We offer personalized services, including:
-Laundry and dry cleaning services
-Additional bedding or towels
-Local sightseeing recommendations
-If you need anything special, don’t hesitate to reach out to us. We’re here to make your stay as comfortable as possible.`,
-  },
+{
+  question: "Can I request extra services during my stay?",
+  answer: [
+    "Laundry and dry cleaning services",
+    "Additional bedding or towels",
+    "Local sightseeing recommendations",
+    "We’re happy to accommodate special requests"
+  ]
+},
   {
     question: "Is there a minimum stay requirement?",
     answer: `We do not have a minimum stay requirement, but we do encourage longer stays to fully experience everything Chennai has to offer.`,
@@ -120,11 +125,18 @@ const AdyarHouseFaq = () => {
               <span className={`arrow ${activeIndex === index ? "rotate" : ""}`}>▼</span>
             </div>
             {activeIndex === index && (
-              <div className="faq-answer">
-                {item.answer.split("\n").map((line, i) => (
-                  <p key={i}>{line}</p>
-                ))}
-              </div>
+            <div className="faq-answer">
+              {Array.isArray(item.answer) ? (
+                <ul>
+                  {item.answer.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
+              ) : (
+                item.answer.split("\n").map((line, i) => <p key={i}>{line}</p>)
+              )}
+            </div>
+
             )}
             <div className="faq-divider"></div>
           </div>

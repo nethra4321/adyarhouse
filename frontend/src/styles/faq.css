@@ -34,7 +34,8 @@
 .faq-answer {
   padding: 0 10px 15px 10px;
   color: #444;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
 
 .faq-divider {
@@ -54,4 +55,15 @@
   .adyar-faq-container {
     margin-top: 160px; 
   }
+}
+.faq-answer ul {
+  padding-left: 1.5rem; 
+  margin: 0.5rem 0 1rem 0;
+  list-style-type: disc;
+}
+
+.faq-answer li {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
 }

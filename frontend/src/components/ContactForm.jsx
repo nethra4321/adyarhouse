@@ -2,13 +2,17 @@ import React, { useState } from 'react';
 import '../styles/contactForm.css';
 import '../styles/Layout.css';
 import Footer from './footer';
+
 function ContactForm() {
+  const API_URL = process.env.REACT_APP_API_URL;
   const [form, setForm] = useState({
     name: '',
     email: '',
     phone: '',
     subject: '',
-    message: ''
+    message: '',
+    checkin: '',
+    checkout: ''
   });
 
   const [status, setStatus] = useState('');
@@ -22,7 +26,7 @@ function ContactForm() {
     setStatus('Submitting...');
 
     try {
-      await fetch('http://localhost:5000/api/contact', {
+      await fetch(`${API_URL}/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
@@ -45,8 +49,14 @@ function ContactForm() {
 
       <div className="contact-main fade-in-up">
         <div className="contact-info">
-          <h2>CONTACT US</h2>
-          <p><i className="fas fa-map-marker-alt"></i> No. 66, 5th Street, Padmanabha Nagar, Adyar, Chennai - 600020</p>
+          <h2 style={{color:'#7f6644'}}>CONTACT US</h2>
+          <p className="address-block">
+            <i className="fas fa-map-marker-alt"></i>
+            <span>
+              No. 66, 5th Street, Padmanabha Nagar,
+              Adyar, Chennai – 600020
+            </span>
+          </p>
           <p><i className="fas fa-envelope"></i><a href="mailto:theadyarhouse@gmail.com">theadyarhouse@gmail.com</a></p>
           <p><i className="fas fa-phone"></i><a href="tel:+919500615567">+91 95006 15567</a></p>
           <p>
@@ -74,7 +84,7 @@ function ContactForm() {
       </div>
 
       <div className="contact-form-container fade-in-up">
-        <h2 style={{textAlign:'center'}}>Enquire Us</h2>
+        <h2 style={{textAlign:'center', color: '#7f6644',fontSize:'24px'}}>ENQUIRE US</h2>
         <form className="modern-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label>Name</label>
@@ -91,6 +101,26 @@ function ContactForm() {
           <div className="form-group">
             <label>Subject</label>
             <input name="subject" value={form.subject} onChange={handleChange} />
+          </div>
+          <div className="form-group">
+            <label>Check-in Date</label>
+            <input
+              type="date"
+              name="checkin"
+              value={form.checkin}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label>Check-out Date</label>
+            <input
+              type="date"
+              name="checkout"
+              value={form.checkout}
+              onChange={handleChange}
+              required
+            />
           </div>
           <div className="form-group">
             <label>Message</label>

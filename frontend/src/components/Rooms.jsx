@@ -2,18 +2,23 @@ import React from 'react';
 import '../styles/room.css';
 import '../styles/contactForm.css';
 import Footer from './footer';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 const Room = () => {
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+  
   return (
     <>
       <div className="contact-banner zoom-in">
         <img src="/bg.jpg" alt="Background" />
       </div>
-      <div className="room-intro">
-        <h2>Discover Our Signature Rooms</h2>
+      <div id="rooms-start" className="room-intro">
+        <h2 style={{paddingBottom:'20px'}}>Discover Our Signature Rooms</h2>
         <p>
-          We offer six beautiful rooms, each named after rivers that are central to the South Indian culture and landscape.
-          <br />
-          <strong>Experience Madras in the Heart of Adyar.</strong>
+          <strong style={{fontSize:'20px'}}>Experience Madras in the Heart of Adyar</strong>
         </p>
       </div>
 
