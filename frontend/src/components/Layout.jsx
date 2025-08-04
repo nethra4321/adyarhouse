@@ -2,42 +2,39 @@ import React, { useEffect, useRef } from 'react';
 import '../styles/Layout.css';
 import '../styles/contactForm.css';
 import Footer from './footer';
-import { FaPhone } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Layout = ({ children }) => {
   const roomRef = useRef(null);
   
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            // Animate heading lines
-            const lines = entry.target.querySelectorAll('.animated-line');
-            lines.forEach((line, index) => {
-              setTimeout(() => {
-                line.classList.add('in-view');
-              }, index * 200); // stagger lines
-            });
-
-            // Animate title
-            const title = entry.target.querySelector('.animated-title');
-            setTimeout(() => {
-              title.classList.add('in-view');
-            }, 600);
-          }
+useEffect(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const lines = entry.target.querySelectorAll('.animated-line');
+        lines.forEach((line, index) => {
+          setTimeout(() => {
+            line.classList.add('in-view');
+          }, index * 200);
         });
-      },
-      { threshold: 0.05 }
-    );
 
-    if (roomRef.current) observer.observe(roomRef.current);
+        const title = entry.target.querySelector('.animated-title');
+        setTimeout(() => {
+          title.classList.add('in-view');
+        }, 600);
+      }
+    });
+  }, { threshold: 0.05 });
 
-    return () => {
-      if (roomRef.current) observer.unobserve(roomRef.current);
-    };
-  }, []);
+  const currentRoom = roomRef.current;
+
+  if (currentRoom) observer.observe(currentRoom);
+
+  return () => {
+    if (currentRoom) observer.unobserve(currentRoom);
+  };
+}, []);
+
 
   return (
     <div>

@@ -3,7 +3,6 @@ import '../styles/room.css';
 import '../styles/contactForm.css';
 import Footer from './footer';
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 
 const Room = () => {
     useEffect(() => {
