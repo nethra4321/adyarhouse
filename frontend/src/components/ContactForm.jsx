@@ -34,7 +34,7 @@ function ContactForm() {
       });
 
       setStatus('Message sent!');
-      setForm({ name: '', email: '', phone: '', subject: '', message: '' });
+      setForm({ name: '', email: '', phone: '', subject: '',checkin: '',checkout: '', message: '' });
     } catch (error) {
       console.error(error);
       setStatus('Failed to send');
