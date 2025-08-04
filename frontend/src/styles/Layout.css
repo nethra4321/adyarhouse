@@ -552,7 +552,12 @@ hr {
   border-bottom: 2px solid #d9cfc2
 
 }
-
+.about-text h2,
+.amenities-title,
+.bedroom-title {
+  text-align: center;
+  /* margin-bottom: 16px; */
+}
 .about-row.reversed {
   flex-direction: row-reverse; 
 }
@@ -562,7 +567,7 @@ hr {
   min-width: 320px;
   max-width: 420px;
   height: 280px;
-  object-fit: cover;
+  /* object-fit: cover; */
   border-radius: 10px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   display: block;

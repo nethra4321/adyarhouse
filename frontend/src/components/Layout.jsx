@@ -69,7 +69,7 @@ useEffect(() => {
                   Nestled in the heart of Chennai's vibrant Adyar neighborhood, The Adyar House offers a tranquil retreat with a touch of Madras' timeless charm. Our homestay is designed to immerse you in the essence of the city—its warmth, culture, and hospitality—while providing the comfort of a modern home away from home. Whether you're visiting for business, leisure, or a special occasion, we promise a memorable and unique experience that reflects the true spirit of Madras.
                 </p>
               </div>
-              <img src="/stairs.jpg" alt="About Us" className="about-img" />
+              <img  style={{ height: '400px', objectFit: 'cover' }}  src="/stairs.jpg" alt="About Us" className="about-img" />
             </div>
           </div>
 
