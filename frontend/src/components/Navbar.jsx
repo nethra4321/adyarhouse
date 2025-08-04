@@ -9,7 +9,7 @@ const Navbar = () => {
       <nav className="layout-navbar">
         <div className="logo-section">
           <Link to="/">
-          <img src="/logo2.png" class="logo-img" alt="adyar house logo"></img>
+          <img src="/logo2.png" className="logo-img" alt="adyar house logo"></img>
           </Link>
           {/* <h1 className="hotel-title">THE ADYAR HOUSE</h1> */}
         </div>
