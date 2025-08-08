@@ -63,7 +63,7 @@ useEffect(() => {
           <div className="about-block">
             <div className="about-row">
               <div className="about-text">
-                <h2>ABOUT US</h2>
+                <h2>About Us</h2>
                 <p>
                   Welcome to The Adyar House – A Homestay Experience Rooted in Madras Charm<br /><br />
                   Nestled in the heart of Chennai's vibrant Adyar neighborhood, The Adyar House offers a tranquil retreat with a touch of Madras' timeless charm. Our homestay is designed to immerse you in the essence of the city—its warmth, culture, and hospitality—while providing the comfort of a modern home away from home. Whether you're visiting for business, leisure, or a special occasion, we promise a memorable and unique experience that reflects the true spirit of Madras.
@@ -91,12 +91,13 @@ useEffect(() => {
           <div className="about-block">
             <div className="about-row">
               <div className="about-text">
+                <img src="/terulogo.png" alt="Teru Restaurant" className="teru-logo" />
                 <h2>Teru - A South Indian Culinary Experience</h2>
                 <p>
                 Located in the premises of The Adyar House, Teru offers a delightful South Indian street food experience that you can enjoy during your stay. Teru is known for its authentic, flavorful dishes from Tamil Nadu, Andhra Pradesh, and Karnataka, and guests can indulge in the finest local street food just steps away from their rooms.
                 </p>
               </div>
-              <img src="/terupic.jpg" alt="Teru Restaurant" className="teru-logo" />
+              <img src="/teru.jpg" alt="Teru Restaurant" className="teru-logo" />
             </div>
           </div>
         </div>

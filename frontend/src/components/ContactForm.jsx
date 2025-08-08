@@ -85,7 +85,7 @@ function ContactForm() {
       </div>
 
       <div className="contact-form-container fade-in-up">
-        <h2 style={{textAlign:'center', color: '#7f6644',fontSize:'24px'}}>ENQUIRE US</h2>
+        <h2 style={{textAlign:'center', color: '#7f6644',fontSize:'24px'}}>Enquire Now<br/><br/></h2>
         <form className="modern-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label>Name</label>
@@ -123,9 +123,9 @@ function ContactForm() {
               required
             />
           </div>
-          <div className="form-group">
+          <div className="full-width">
             <label>Message</label>
-            <textarea name="message" value={form.message} onChange={handleChange} required />
+            <textarea  name="message" value={form.message} onChange={handleChange} required />
           </div>
           <button type="submit">SUBMIT</button>
           {status && <p className="form-status">{status}</p>}

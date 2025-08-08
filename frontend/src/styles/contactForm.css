@@ -69,20 +69,11 @@
   height: auto;
 }
 
-
-/*.contact-form-container {
-  max-width: 800px;
-  width: 100%;
-  margin: 40px auto;
-  padding: 0 24px;
-  animation: fadeInUp 1s ease-out forwards;
-  opacity: 0;
-}*/
 .contact-form-container {
   background-color: #fff;
-  padding: 4rem;
-  margin:  4rem auto;
-  max-width: 600px;
+  padding: 3rem;
+  margin:  1rem auto;
+  max-width: 700px;
   width:100%;
   animation: fadeInUp 1s ease-out forwards;
   opacity: 0;
@@ -92,13 +83,13 @@
 }
 
 .modern-form {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   width: 100%;
-  max-width: 400px;
   margin: 0 auto;
 }
+
 
 .form-group {
   display: flex;
@@ -134,7 +125,10 @@ textarea {
   resize: vertical;
 }
 
+
+
 button {
+   grid-column: span 2;
   width: 100%;
   padding: 14px;
   background-color: #c1b184;
@@ -155,6 +149,16 @@ button:hover {
   margin-top: 8px;
   font-size: 0.9rem;
   color: #c1b184;
+}
+.form-message {
+  grid-column: span 2;
+  width: 100%;
+  min-height: 100px;
+  resize: vertical;
+}
+.full-width {
+  grid-column: 1 / -1;
+  width: 100%;
 }
 
 @keyframes fadeInUp {
@@ -192,14 +196,13 @@ button:hover {
     width: 95%;
     max-width: 600px;
   }
-
   .modern-form {
-    width: 100%;
-    max-width: 100%;
+    grid-template-columns: 1fr;
   }
 
+  textarea,
   button {
-    width: 100%;
+    grid-column: span 1;
   }
 }
 
