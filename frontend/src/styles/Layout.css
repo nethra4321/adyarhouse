@@ -303,7 +303,6 @@ html, body {
 }
 
 @media (max-width: 768px) {
-  
   .layout-navbar {
     flex-direction: column;
     height: auto;
@@ -370,12 +369,6 @@ html, body {
 }
 
 @media (max-width: 600px) {
-    .intro-title {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
   .facility-grid {
     grid-template-columns: 1fr;
   }
@@ -399,7 +392,6 @@ html, body {
   .logo-img img {
     height: 50px;
   }
-  
 }
 
 @keyframes slideDown {
