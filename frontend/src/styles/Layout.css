@@ -303,6 +303,7 @@ html, body {
 }
 
 @media (max-width: 768px) {
+  
   .layout-navbar {
     flex-direction: column;
     height: auto;
@@ -365,11 +366,16 @@ html, body {
   .intro-title, .intro-description {
     width: 100%;
     text-align: center;
-    
   }
 }
 
 @media (max-width: 600px) {
+    .intro-title {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
   .facility-grid {
     grid-template-columns: 1fr;
   }
@@ -393,6 +399,7 @@ html, body {
   .logo-img img {
     height: 50px;
   }
+  
 }
 
 @keyframes slideDown {
@@ -486,7 +493,7 @@ html, body {
 .intro-content {
   display: flex;
   align-items: stretch;
-  gap: 80px;
+  gap: 30px;
 }
 
 .intro-title {
@@ -499,7 +506,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  text-align: right;
+  text-align: center;
 }
 
 .intro-divider {
