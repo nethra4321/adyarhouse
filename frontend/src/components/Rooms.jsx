@@ -60,7 +60,10 @@ const Room = () => {
                   <li><i className="fas fa-suitcase-rolling"></i> Cupboard</li>
                   <li><i className="fas fa-layer-group"></i> Towels</li> 
                   <li><i className="fas fa-bath"></i> Bathing Soaps</li>
-                  <li><i className="fas fa-tooth"></i> Dental Kit</li>
+                  <li>
+                    <img src="/toothbrush.svg" alt="Toothbrush Icon" style={{width: "18px",height: "20px", verticalAlign: "middle"}}/>
+                    Dental Kit
+                  </li>
                   <li><i className="fas fa-wifi"></i> Free WiFi</li>
                 </ul>
               </div>
@@ -108,7 +111,10 @@ const Room = () => {
                   <li><i className="fas fa-suitcase-rolling"></i> Cupboard</li>
                   <li><i className="fas fa-layer-group"></i> Towels</li> 
                   <li><i className="fas fa-bath"></i> Bathing Soaps</li>
-                  <li><i className="fas fa-tooth"></i> Dental Kit</li>
+                  <li>
+                    <img src="/toothbrush.svg" alt="Toothbrush Icon" style={{width: "18px",height: "20px", verticalAlign: "middle"}}/>
+                    Dental Kit
+                  </li>
                   <li><i className="fas fa-wifi"></i> Free WiFi</li>
                 </ul>
               </div>
@@ -156,7 +162,10 @@ const Room = () => {
                   <li><i className="fas fa-suitcase-rolling"></i> Cupboard</li>
                   <li><i className="fas fa-layer-group"></i> Towels</li> 
                   <li><i className="fas fa-bath"></i> Bathing Soaps</li>
-                  <li><i className="fas fa-tooth"></i> Dental Kit</li>
+                  <li>
+                    <img src="/toothbrush.svg" alt="Toothbrush Icon" style={{width: "18px",height: "20px", verticalAlign: "middle"}}/>
+                    Dental Kit
+                  </li>
                   <li><i className="fas fa-wifi"></i> Free WiFi</li>
                 </ul>
               </div>
@@ -204,7 +213,10 @@ const Room = () => {
                   <li><i className="fas fa-suitcase-rolling"></i> Cupboard</li>
                   <li><i className="fas fa-layer-group"></i> Towels</li> 
                   <li><i className="fas fa-bath"></i> Bathing Soaps</li>
-                  <li><i className="fas fa-tooth"></i> Dental Kit</li>
+                  <li>
+                    <img src="/toothbrush.svg" alt="Toothbrush Icon" style={{width: "18px",height: "20px", verticalAlign: "middle"}}/>
+                    Dental Kit
+                  </li>
                   <li><i className="fas fa-wifi"></i> Free WiFi</li>
                 </ul>
               </div>
@@ -252,7 +264,10 @@ const Room = () => {
                   <li><i className="fas fa-warehouse"></i> Walk-in Wardrobe</li>
                   <li><i className="fas fa-layer-group"></i> Towels</li> 
                   <li><i className="fas fa-bath"></i> Bathing Soaps</li>
-                  <li><i className="fas fa-tooth"></i> Dental Kit</li>
+                  <li>
+                    <img src="/toothbrush.svg" alt="Toothbrush Icon" style={{width: "18px",height: "20px", verticalAlign: "middle"}}/>
+                    Dental Kit
+                  </li>
                   <li><i className="fas fa-wifi"></i> Free WiFi</li>
                 </ul>
               </div>
@@ -300,7 +315,10 @@ const Room = () => {
                   <li><i className="fas fa-suitcase-rolling"></i> Cupboard</li>
                   <li><i className="fas fa-layer-group"></i> Towels</li> 
                   <li><i className="fas fa-bath"></i> Bathing Soaps</li>
-                  <li><i className="fas fa-tooth"></i> Dental Kit</li>
+                  <li>
+                    <img src="/toothbrush.svg" alt="Toothbrush Icon" style={{width: "18px",height: "20px", verticalAlign: "middle"}}/>
+                    Dental Kit
+                  </li>
                   <li><i className="fas fa-wifi"></i> Free WiFi</li>
                 </ul>
               </div>
