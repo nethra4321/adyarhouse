@@ -102,7 +102,7 @@ const TermsAndConditions = () => {
       </ol>
 
       <p className="terms-contact">
-        If you have any queries regarding these terms, feel free to contact us at <a href="mailto:theadyarhouse@gmail.com">theadyarhouse@gmail.com</a> or call us at +91 95006 15567 .
+        If you have any queries regarding these terms, feel free to contact us at <a href="mailto:theadyarhouse@gmail.com">theadyarhouse@gmail.com</a> or call us at <a href="tel:+919500615567">+91 95006 15567</a>
       </p>
     </section>
     <Footer />
