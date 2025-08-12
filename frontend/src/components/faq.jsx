@@ -82,8 +82,8 @@ If you need to adjust these timings, please contact us in advance, and we will d
   {
     question: "Nearby banquet halls and wedding venues",
     answer: `We are also conveniently located close to several banquet halls and wedding venues, including:
-Mayor Ramanathan Centre and Dwaraka Palace Wedding Halls in MRC Nagar & Thiruvanmiyur respectively
-A variety of event spaces & wedding halls in Mylapore, RA Puram, Alwarpet, and Kotturpuram.`,
+Mayor Ramanathan Centre and Dwaraka Palace Wedding Halls in MRC Nagar & Thiruvanmiyur respectively,
+A variety of event spaces & wedding halls in Mylapore, RA Puram, Alwarpet, and Kotturpuram.`
   },
 {
   question: "Can I request extra services during my stay?",
@@ -91,7 +91,7 @@ A variety of event spaces & wedding halls in Mylapore, RA Puram, Alwarpet, and K
     "Laundry and dry cleaning services",
     "Additional bedding or towels",
     "Local sightseeing recommendations",
-    "We’re happy to accommodate special requests"
+    "If you need anything special, don’t hesitate to reach out to us. We’re here to make your stay as comfortable as possible."
   ]
 },
   {
@@ -126,15 +126,33 @@ const AdyarHouseFaq = () => {
             </div>
             {activeIndex === index && (
             <div className="faq-answer">
-              {Array.isArray(item.answer) ? (
+            {Array.isArray(item.answer) ? (
+              <>
                 <ul>
-                  {item.answer.map((point, i) => (
-                    <li key={i}>{point}</li>
-                  ))}
+                  {item.answer.map((point, i) => {
+                    const isLast = i === item.answer.length - 1;
+                    const isNote = typeof point === 'string' && point.toLowerCase().includes("special");
+
+                    if (isLast && isNote) return null;
+
+                    return <li key={i}>{point}</li>;
+                  })}
                 </ul>
-              ) : (
-                item.answer.split("\n").map((line, i) => <p key={i}>{line}</p>)
-              )}
+                {
+                  (() => {
+                    const last = item.answer[item.answer.length - 1];
+                    const isNote = typeof last === 'string' && last.toLowerCase().includes("special");
+                    if (isNote) {
+                      return <p style={{ marginTop: '8px' }}>{last}</p>;
+                    }
+                    return null;
+                  })()
+                }
+              </>
+            ) : (
+              item.answer.split("\n").map((line, i) => <p key={i}>{line}</p>)
+            )}
+
             </div>
 
             )}
