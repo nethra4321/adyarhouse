@@ -789,6 +789,7 @@ hr {
 }
 }
 
+
 @media (max-width: 1300px) {
     .layout-bg-image {
         width: 100%;
@@ -798,4 +799,11 @@ hr {
         animation: zoomIn 1.5s ease-out forwards;
         opacity: 0;
     }
+    
+}
+@media (min-width: 992px) {
+  .layout-bg-image {
+    height: 90vh; /* or your original height */
+    opacity: 1;
+  }
 }

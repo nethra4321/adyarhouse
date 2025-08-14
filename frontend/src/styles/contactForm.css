@@ -193,6 +193,7 @@ button:hover {
   animation: zoomIn 1.5s ease-out forwards;
   opacity: 0;
 }}
+
 @media (max-width: 1300px) {
   .contact-banner img {
   width: 100%;
@@ -253,4 +254,9 @@ button:hover {
 
 .address-block i {
   margin-top: 3px; 
+}
+@media (min-width: 1201px) {
+  .contact-banner img {
+    height: 90vh!important;
+  }
 }
