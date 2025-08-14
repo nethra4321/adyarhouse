@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+html, body {
+    font-family: 'Montserrat'
+}
 .adyar-faq-container {
   max-width: 900px;
   margin: 120px auto 40px auto;
   padding: 0 20px;
-  font-family: "Segoe UI", sans-serif;
   color: #222;
   scroll-margin-top: 100px; 
 }

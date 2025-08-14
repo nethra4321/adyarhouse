@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/footer.css";
 import {FaMapMarkerAlt, FaEnvelope, FaPhone, FaInstagram, FaFileAlt, FaQuestionCircle } from "react-icons/fa";
 
+// Footer component
 const Footer = () => {
   return (
     <footer className="footer-container">

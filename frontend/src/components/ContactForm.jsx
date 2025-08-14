@@ -3,6 +3,7 @@ import '../styles/contactForm.css';
 import '../styles/Layout.css';
 import Footer from './footer';
 
+{/* contact form creation*/}
 function ContactForm() {
   const API_URL = process.env.REACT_APP_API_URL;
   const [form, setForm] = useState({
@@ -68,7 +69,7 @@ function ContactForm() {
           </p>
         </div>
 
- 
+      {/* Google map of adyar house*/}
       <div className="contact-map">
         <iframe
           title="Adyar House Location"
@@ -81,9 +82,9 @@ function ContactForm() {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-
       </div>
 
+      {/* Contact form inputs*/}
       <div className="contact-form-container fade-in-up">
         <h2 style={{textAlign:'center', color: '#7f6644',fontSize:'24px'}}>Enquire Now<br/><br/></h2>
         <form className="modern-form" onSubmit={handleSubmit}>

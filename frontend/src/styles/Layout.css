@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+html, body {
+    font-family: 'Montserrat'
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,12 +22,16 @@ html, body {
 
 
 .layout-bg-image {
-  position: absolute;
-  inset: 0;
+    object-position: center top;
+    width: 100%;
+    object-fit: fill;
+    height: 90vh;
+  }
+.nav-section {
+  position: relative;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
+  height: 3vh;
+  overflow: hidden;
 }
 
 
@@ -118,18 +127,12 @@ html, body {
   margin-top: 30vh;
 }
 
-.nav-section {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
 
 .room-section {
-  padding: 2rem;
+  padding: 20px 10px!important;
   background-color: white;
   color: black;
-  text-align: center;
+  text-align: center; 
 }
 
 .bedroom-title-wrapper {
@@ -303,97 +306,7 @@ html, body {
   color: #2f5130;
 }
 
-@media (max-width: 768px) {
-  .layout-navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 0.5rem 1rem;
-    align-items: flex-start;
-  }
 
-  .logo-img {
-    height: 80px;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  .logo-img img {
-    height: 60px;
-    width: auto;
-  }
-
-  .nav-links {
-    position: static;
-    transform: none;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    gap: 1rem;
-    margin-top: 0.5rem;
-  }
-
-  .nav-links a {
-    font-size: 1rem;
-    padding: 0.3rem 0;
-  }
-
-  .book-btn {
-    font-size: 0.85rem;
-    padding: 0.4rem 1rem;
-    margin-left: 0;
-  }
-
-  .amenities-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .layout-bg-image {
-    object-position: center top;
-    width: 100%;
-  }
-
-  .intro-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .intro-divider {
-    display: none;
-  }
-
-  .intro-title, .intro-description {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-@media (max-width: 600px) {
-  .facility-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .nav-links {
-    gap: 0.5rem;
-  }
-
-  .book-btn {
-    font-size: 0.75rem;
-    padding: 0.3rem 0.8rem;
-  }
-
-  .layout-bg-image {
-    object-position: center top;
-    object-fit: cover;
-  }
-
-  .logo-img img {
-    height: 50px;
-  }
-}
 
 @keyframes slideDown {
   from {
@@ -515,7 +428,7 @@ html, body {
   line-height: 1.7;
   color: #333;
   margin: 0;
-  text-align: justify;
+  text-align: justify!important;
 }
 
 .flipped-icon {
@@ -544,9 +457,8 @@ hr {
   justify-content: space-between;
   gap: 40px;
   flex-wrap: nowrap; 
-   background-color: #fcf9f5;
+  background-color: #fcf9f5;
   padding: 30px;
-  /* border-radius: 12px; */
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
   border-top: 2px solid #d9cfc2;
   border-bottom: 2px solid #d9cfc2
@@ -556,7 +468,7 @@ hr {
 .amenities-title,
 .bedroom-title {
   text-align: center;
-  /* margin-bottom: 16px; */
+  margin-top:10px;
 }
 .about-row.reversed {
   flex-direction: row-reverse; 
@@ -567,7 +479,6 @@ hr {
   min-width: 320px;
   max-width: 420px;
   height: 280px;
-  /* object-fit: cover; */
   border-radius: 10px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   display: block;
@@ -592,6 +503,63 @@ hr {
   font-size: 1.8rem;
   margin-bottom: 15px;
   color: #111;
+}
+.teru-logo {
+  width: 100%;
+  max-width: 300px;
+  height: auto;          
+  object-fit: contain;   
+  margin: 0 auto;
+  display: block;
+}
+
+
+@media (max-width: 600px) {
+    .room-section {
+    padding: 20px 10px; 
+  }
+  .about-section {
+    padding: 20px 10px; 
+  }
+  .layout-content {
+    margin: 30vh 0 0 0; 
+    max-width: 100%; 
+  }
+  .facility-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-img {
+    height: auto;
+    max-height: 250px;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+  .about-text p {
+  text-align: justify;
+     width:100%
+}
+  .nav-links {
+    gap: 0.5rem;
+  }
+
+  .book-btn {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .layout-bg-image {
+    object-position: center top;
+    object-fit: cover;
+  }
+
+  .logo-img img {
+    height: 50px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -618,10 +586,51 @@ hr {
     max-height: 300px;
     margin: 0 auto;
   }
+  
+}
+@media (max-width: 1500px) {
+  .about-img {
+    height: auto;
+    max-height: 600px;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+  .about-text p {
+  text-align: justify;
+     width:100%
+}
+
 }
 
 @media (max-width: 768px) {
-    .logo-section {
+    .about-row {
+    width: 100%;
+    max-width: 100vw;
+    padding: 0 1rem; 
+    gap: 20px;
+    box-sizing: border-box;
+  }
+  .room-section {
+    padding: 20px 10px;
+  }
+  .about-section {
+    padding: 20px 10px; 
+  }
+  .layout-content {
+    margin: 30vh 0 0 0; 
+    max-width: 100%; 
+  }
+
+  .layout-navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 0.5rem 1rem;
+    align-items: flex-start;
+  }
+
+  .logo-section {
     position: relative;
     left: auto;
     transform: none;
@@ -632,17 +641,33 @@ hr {
   }
 
   .logo-img {
-    height: 60px;
+    height: 80px;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
     object-fit: contain;
   }
-   .nav-links {
+
+  .logo-img img {
+    height: 60px;
+    width: auto;
+  }
+
+  .nav-links {
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
     width: 100%;
     position: static;
     transform: none;
     padding: 0 1rem;
+    gap: 1rem;
     margin-top: 0.5rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    padding: 0.3rem 0;
   }
 
   .left-link {
@@ -654,8 +679,46 @@ hr {
     text-align: right;
     flex: 1;
   }
+
+  .book-btn {
+    font-size: 0.85rem;
+    padding: 0.4rem 1rem;
+    margin-left: 0;
+  }
+
+  .layout-bg-image {
+    object-position: center top;
+    width: 100%;
+    object-fit: fill;
+    height: 45vh;
+  }
+.nav-section {
+  position: relative;
+  width: 100%;
+  height: 3vh;
+  overflow: hidden;
+}
+  .intro-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro-divider {
+    display: none;
+  }
+
+  .intro-title,
+  .intro-description {
+    width: 100%;
+    text-align: center;
+  }
+
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .about-section {
-    /* padding: 30px 15px; */
     gap: 40px;
   }
 
@@ -679,45 +742,60 @@ hr {
   .about-text p {
     font-size: 0.95rem;
     text-align: justify;
-       width:100%
+    width: 100%;
   }
-
 }
 
-@media (max-width: 480px) {
-  .about-img {
-    height: auto;
-    max-height: 250px;
+@media screen and (width: 1024px) and (height: 600px) {
+  .layout-bg-image {
+    object-position: center top;
+    width: 100%;
+    object-fit: fill;
+    height: 90vh!important;
   }
-
-  .about-text h2 {
-    font-size: 1.5rem;
-  }
-  .about-text p {
-  text-align: justify;
-     width:100%
-}
-}
-
-@media (max-width: 1500px) {
-  .about-img {
-    height: auto;
-    max-height: 600px;
-  }
-
-  .about-text h2 {
-    font-size: 1.5rem;
-  }
-  .about-text p {
-  text-align: justify;
-     width:100%
-}
-}
-.teru-logo {
+.nav-section {
+  position: relative;
   width: 100%;
-  max-width: 300px;
-  height: auto;          
-  object-fit: contain;   
-  margin: 0 auto;
-  display: block;
+  height: 95vh;
+  overflow: hidden;
+}
+}@media screen and (width: 1280px) and (height: 800px) {
+  .layout-bg-image {
+    object-position: center top;
+    width: 100%;
+    object-fit: fill;
+    height: 90vh!important;
+  }
+.nav-section {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+}
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+  .layout-bg-image {
+    object-position: center top;
+    width: 100%;
+    object-fit: fill;
+    height: 50vh;
+  }
+.nav-section {
+  position: relative;
+  width: 100%;
+  height: 3vh;
+  overflow: hidden;
+}
+}
+
+@media (max-width: 1300px) {
+    .layout-bg-image {
+        width: 100%;
+        height: 45vh;
+        /* object-fit: cover; */
+        display: block;
+        animation: zoomIn 1.5s ease-out forwards;
+        opacity: 0;
+    }
 }

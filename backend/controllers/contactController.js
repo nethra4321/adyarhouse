@@ -1,6 +1,7 @@
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
+// Sends an email when someone submits the contact form on the website
 exports.sendContactEmail = async (req, res) => {
   const { name, email, phone, subject, message,checkin, checkout  } = req.body;
 
@@ -51,7 +52,6 @@ console.log("Sending mail with reply-to:", email);
   };
 
 
-  // Send email 
 try {
     await transporter.sendMail(mailOptions);
     return res.status(200).json({ message: 'Email sent successfully' }); 

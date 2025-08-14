@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+html, body {
+    font-family: 'Montserrat'
+}
+
 .room-section {
   background-color: #fff;
   padding: 50px 40px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #5b4f2a;
 }
 
@@ -151,6 +156,7 @@
   .room-container {
     flex-direction: column;
     align-items: center;
+    padding: 0 20px; 
   }
 
   .room-image img {
@@ -160,22 +166,24 @@
 
   .tariff-features-container {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     gap: 24px;
+    width: 100%;
   }
 
   .features {
-    text-align: center;
+    text-align: left;
     width: 100%;
   }
 
   .features h4 {
-    text-align: center;
+    text-align: left;
   }
 
   .features ul {
-    justify-content: center;
-    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    justify-content: start;
+    gap: 18px 32px;
   }
 
   .vertical-separator {
@@ -185,9 +193,9 @@
 
 @media (max-width: 600px) {
   .features ul {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 14px;
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    justify-items: start;
+    gap: 14px 20px;
   }
 
   .room-title {
@@ -211,12 +219,12 @@
     font-size: 0.95rem;
   }
 }
+
 .room-intro {
   text-align: center;
   max-width: 900px;
   margin: 40px auto 60px auto;
   padding: 0 20px;
-  font-family: 'Segoe UI', sans-serif;
  color: #7f6644;
 }
 
@@ -236,7 +244,6 @@
   margin: 20px auto 10px;
   padding: 50px 20px;
   text-align: center;
-  font-family: 'Segoe UI', sans-serif;
   color: #444;
   font-size: 1.15rem;
   line-height: 1.8;

@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+html, body {
+    font-family: 'Montserrat'
+}
 
 .contact-wrapper {
   width: 100%;
@@ -6,13 +11,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
 }
 
 .contact-banner img {
   width: 100%;
-  height: 100vh;
-  object-fit: cover;
+  height: 90vh;
   display: block;
   animation: zoomIn 1.5s ease-out forwards;
   opacity: 0;
@@ -182,9 +185,43 @@ button:hover {
     opacity: 1;
   }
 }
-
-
+@media (max-width: 1200px) {
+    .contact-banner img {
+  width: 100%;
+  height: 40vh;
+  display: block;
+  animation: zoomIn 1.5s ease-out forwards;
+  opacity: 0;
+}}
+@media (max-width: 1300px) {
+  .contact-banner img {
+  width: 100%;
+  height: 50vh;
+  display: block;
+  animation: zoomIn 1.5s ease-out forwards;
+  opacity: 0;
+}}
+@media screen and (width: 1024px) and (height: 600px) {
+  .contact-banner img {
+    height: 90vh;
+  }
+}@media screen and (width: 1280px) and (height: 800px) {
+  .contact-banner img {
+    height: 90vh;
+  }
+}
 @media (max-width: 768px) {
+    .contact-banner img {
+  width: 100%;
+  /* height: 100vh;
+  object-fit: cover; */
+    height: 40vh;
+  /* object-fit: cover; */
+  display: block;
+  animation: zoomIn 1.5s ease-out forwards;
+  opacity: 0;
+}
+
   .contact-main {
     flex-direction: column;
     padding: 0 16px;

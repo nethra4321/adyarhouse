@@ -101,7 +101,7 @@ const TermsAndConditions = () => {
         </li>
       </ol>
 
-      <p className="terms-contact">
+      <p className="terms-contact" style={{lineHeight: '1.6'}}>
         If you have any queries regarding these terms, feel free to contact us at <a href="mailto:theadyarhouse@gmail.com">theadyarhouse@gmail.com</a> or call us at <a href="tel:+919500615567">+91 95006 15567</a>
       </p>
     </section>

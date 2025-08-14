@@ -45,8 +45,8 @@ useEffect(() => {
       <section ref={roomRef} className="room-section">
         <div className="intro-wrapper">
           <div className="intro-content">
-            <h2 className="intro-title">
-              A LUXURY HOMESTAY <br /> IN CHENNAI'S HEART
+            <h2 className="intro-title" style={{textAlign: 'center'}}>
+              A LUXURY HOMESTAY IN CHENNAI'S HEART
             </h2>
             <div className="intro-divider" />
             <p className="intro-description">
@@ -92,7 +92,7 @@ useEffect(() => {
             <div className="about-row">
               <div className="about-text">
                 <img src="/terulogo.png" alt="Teru Restaurant" className="teru-logo" />
-                <h2>Teru - A South Indian Culinary Experience</h2>
+                <h2>A South Indian Culinary Experience</h2>
                 <p>
                 Located in the premises of The Adyar House, Teru offers a delightful South Indian street food experience that you can enjoy during your stay. Teru is known for its authentic, flavorful dishes from Tamil Nadu, Andhra Pradesh, and Karnataka, and guests can indulge in the finest local street food just steps away from their rooms.
                 </p>
@@ -160,7 +160,7 @@ useEffect(() => {
           <div className="amenities-grid">
             <div className="amenity">
               <i className="fa-solid fa-wifi"></i>
-              <p>HIGH-SPEED WI-FI</p>
+              <p className="no-break">HIGH-SPEED WI-FI</p>
             </div>
             <div className="amenity">
               <i className="fa-solid fa-utensils"></i>
