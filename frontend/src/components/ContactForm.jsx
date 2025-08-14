@@ -3,7 +3,7 @@ import '../styles/contactForm.css';
 import '../styles/Layout.css';
 import Footer from './footer';
 
-{/* contact form creation*/}
+//contact form creation
 function ContactForm() {
   const API_URL = process.env.REACT_APP_API_URL;
   const [form, setForm] = useState({
